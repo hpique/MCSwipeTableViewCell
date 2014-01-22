@@ -597,7 +597,6 @@ typedef NS_ENUM(NSUInteger, MCSwipeTableViewCellDirection) {
     
     [UIView animateWithDuration:duration delay:0 options:(UIViewAnimationOptionCurveEaseOut | UIViewAnimationOptionAllowUserInteraction) animations:^{
         _contentScreenshotView.frame = frame;
-        _slidingView.alpha = 0;
         [self slideViewWithPercentage:percentage view:_activeView isDragging:self.shouldAnimateIcons];
     } completion:^(BOOL finished) {
         [self executeCompletionBlock];
