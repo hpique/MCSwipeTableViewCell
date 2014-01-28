@@ -77,9 +77,11 @@ typedef void (^MCSwipeCompletionBlock)(MCSwipeTableViewCell *cell, MCSwipeTableV
 @property (nonatomic, assign, readwrite) NSTimeInterval animationDuration;
 
 
-/** Color for background, when no state has been triggered. */
-@property (nonatomic, strong, readwrite) UIColor *defaultColor;
+/** Color for background, when no state has been triggered during a Left -> Right swipe. */
+@property (nonatomic, strong, readwrite) UIColor *defaultColor1;
 
+/** Color for background, when no state has been triggered during a Right -> Left swipe. */
+@property (nonatomic, strong, readwrite) UIColor *defaultColor3;
 
 /** 1st `UIColor` of the state triggered during a Left -> Right swipe. */
 @property (nonatomic, strong, readwrite) UIColor *color1;
