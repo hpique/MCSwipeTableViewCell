@@ -108,6 +108,8 @@ typedef void (^MCSwipeCompletionBlock)(MCSwipeTableViewCell *cell, MCSwipeTableV
 /** 2nd `UIView` of the state triggered during a Right -> Left swipe. */
 @property (nonatomic, strong, readwrite) UIView *view4;
 
+/** Keeps the swipe views after prepareForReuse. */
+@property (nonatomic, assign, readwrite) BOOL reuseSwipeViews;
 
 /** 1st `MCSwipeCompletionBlock` of the state triggered during a Left -> Right swipe. */
 @property (nonatomic, copy, readwrite) MCSwipeCompletionBlock completionBlock1;

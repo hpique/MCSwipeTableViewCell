@@ -135,10 +135,13 @@ typedef NS_ENUM(NSUInteger, MCSwipeTableViewCellDirection) {
     _color4 = nil;
     
     _activeView = nil;
-    _view1 = nil;
-    _view2 = nil;
-    _view3 = nil;
-    _view4 = nil;
+    if (!self.reuseSwipeViews)
+    {
+        _view1 = nil;
+        _view2 = nil;
+        _view3 = nil;
+        _view4 = nil;
+    }
 }
 
 #pragma mark - Prepare reuse
